@@ -9,11 +9,7 @@ import UIKit
 
 class RepeatSetting: UITableViewCell {
 
-    var delegate: TransitionDelegate?
-
     @IBAction func buttonTapped(_ sender: Any) {
-
-        delegate?.transition()
 
     }
     

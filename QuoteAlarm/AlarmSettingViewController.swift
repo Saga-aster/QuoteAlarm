@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlarmSettingViewController: UIViewController, TransitionDelegate {
+class AlarmSettingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -71,11 +71,9 @@ extension AlarmSettingViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         case .repeatSetting:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! RepeatSetting
-            cell.delegate = self
             return cell
         case .alarmSoundSetting :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! AlarmSoundSetting
-            cell.delegate = self
             return cell
         case .vibrationSetting:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! VibrationSetting

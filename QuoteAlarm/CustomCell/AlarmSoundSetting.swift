@@ -9,11 +9,9 @@ import UIKit
 
 class AlarmSoundSetting: UITableViewCell {
 
-    var delegate: TransitionDelegate?
 
     @IBAction func buttonTapped(_ sender: Any) {
         
-        delegate?.transition()
 
     }
     

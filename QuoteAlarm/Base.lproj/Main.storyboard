@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="-1770" y="515"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm Sound Setting View Controller-->
         <scene sceneID="Dbp-S2-eTD">
             <objects>
-                <viewController id="U9G-Yn-EQ5" customClass="ViewController" customModule="QuoteAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U9G-Yn-EQ5" customClass="AlarmSoundSettingViewController" customModule="QuoteAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Njd-67-t0q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDD-1J-yHo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="69"/>
+            <point key="canvasLocation" x="767" y="137"/>
         </scene>
         <!--Repeat Setting View Controller-->
         <scene sceneID="tRw-eW-qUO">
