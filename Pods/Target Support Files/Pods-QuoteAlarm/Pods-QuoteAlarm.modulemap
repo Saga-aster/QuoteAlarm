@@ -1,6 +1,0 @@
-framework module Pods_QuoteAlarm {
-  umbrella header "Pods-QuoteAlarm-umbrella.h"
-
-  export *
-  module * { export * }
-}
