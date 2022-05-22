@@ -29,18 +29,18 @@ class QuoteViewController: UIViewController {
         AF.request("https://meigen.doodlenote.net/api/json.php")
             .responseJSON { response in
                 let decoder = JSONDecoder()
-
                 do {
-
                     self.quotes = try decoder.decode([QuoteData].self, from: response.data!)
                     print("Quote: \(self.quotes)")
-                    self.quoteTextView.text = self.quotes[0].meigen
-                    self.authorLabel.text = self.quotes[0].auther
 
+                    if self.quotes.isEmpty {
+                        print("名言データがありません")
+                    } else {
+                        self.quoteTextView.text = self.quotes[0].meigen
+                        self.authorLabel.text = self.quotes[0].auther
+                    }
                 } catch  {
-
                     print("失敗しました")
-
                 }
             }
     }

@@ -68,19 +68,16 @@ class RepeatSettingViewController: UITableViewController {
         if row == 0 {
             repeatWeekdayFlags[0] = true
             repeatWeekdayFlags[1...] = [false, false, false, false, false, false, false]
-            UserDefaults.standard.setValue(repeatWeekdayFlags, forKey: "RepeatFlags")
             print(repeatWeekdayFlags)
         } else {
             repeatWeekdayFlags[0] = false
             repeatWeekdayFlags[row].toggle()
-            UserDefaults.standard.setValue(repeatWeekdayFlags, forKey: "RepeatFlags")
         }
 
         if repeatWeekdayFlags[1...] == [false, false, false, false, false, false, false] {
             repeatWeekdayFlags[0] = true
-            UserDefaults.standard.setValue(repeatWeekdayFlags, forKey: "RepeatFlags")
         }
-
+        UserDefaults.standard.set(repeatWeekdayFlags, forKey: "RepeatFlags")
     }
 
 }

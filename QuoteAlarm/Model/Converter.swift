@@ -13,7 +13,6 @@ class Converter {
 
     func encode(_ alarmData: AlarmData) -> Data? {
 
-        let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         return try? encoder.encode(alarmData)
 
@@ -21,7 +20,6 @@ class Converter {
 
     func decode(_ alarmData: Data) -> AlarmData? {
 
-        let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try? decoder.decode(AlarmData.self, from: alarmData)
         

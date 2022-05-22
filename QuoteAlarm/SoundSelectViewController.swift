@@ -68,8 +68,8 @@ class SoundSelectViewController: UITableViewController {
 
         selectSoundFlags = [false, false, false, false, false, false, false, false]
         selectSoundFlags[row] = true
-        UserDefaults.standard.setValue(selectSoundFlags, forKey: "SelectedSoundFlags")
-        UserDefaults.standard.setValue(sounds[row], forKey: "SoundName")
+        UserDefaults.standard.set(selectSoundFlags, forKey: "SelectedSoundFlags")
+        UserDefaults.standard.set(sounds[row], forKey: "SoundName")
 
     }
 
@@ -84,7 +84,6 @@ extension SoundSelectViewController: AVAudioPlayerDelegate {
         }
         do {
             audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            audioPlayer.delegate = self
             audioPlayer.play()
         } catch  {
             print("再生できませんでした")

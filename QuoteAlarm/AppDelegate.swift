@@ -39,7 +39,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // 通知をタップした場合の動作
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
-        UserDefaults.standard.setValue("fromDidReceive", forKey: "FromDidReceive")
+        UserDefaults.standard.set("fromDidReceive", forKey: "FromDidReceive")
 
     }
 

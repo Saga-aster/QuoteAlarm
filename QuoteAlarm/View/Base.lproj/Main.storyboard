@@ -81,6 +81,9 @@
                                                 <constraint firstItem="2Rs-Ds-sRB" firstAttribute="centerY" secondItem="jlR-GH-aOy" secondAttribute="centerY" id="iwd-1x-yAr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TXd-do-FhO" kind="show" id="cnu-5q-qtB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V60-Am-NIi">
                                         <rect key="frame" x="0.0" y="131.5" width="414" height="43.5"/>
@@ -136,6 +139,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="s3G-sn-BZW" secondAttribute="trailing" constant="0.5" id="zdw-Gq-mDg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Lrh-hA-35r" kind="show" id="4Vc-7C-YbF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -162,8 +168,6 @@
                         <outlet property="datePicker" destination="55r-tN-2pe" id="7bV-Ge-ZtA"/>
                         <outlet property="repeatSettingStatusLabel" destination="NGa-Hc-gTE" id="W9a-YE-JjC"/>
                         <outlet property="snoozeStatusSwitch" destination="n1D-Kz-xtn" id="yVA-9B-J8u"/>
-                        <segue destination="TXd-do-FhO" kind="show" id="4Nu-zo-lF0"/>
-                        <segue destination="Lrh-hA-35r" kind="show" id="Q4P-l0-ruB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPW-oS-rUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,6 +294,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マヤ・アンジェロウ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t11-Kf-lnb">
                                 <rect key="frame" x="213.5" y="359" width="156" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="w8J-fn-Tlu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -299,11 +306,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="t11-Kf-lnb" firstAttribute="top" secondItem="zwB-4s-v6I" secondAttribute="bottom" constant="15" id="952-q2-HMx"/>
-                            <constraint firstItem="t11-Kf-lnb" firstAttribute="leading" secondItem="UpR-OC-vvz" secondAttribute="leading" priority="750" constant="213.5" id="9z0-KP-Xd7"/>
+                            <constraint firstItem="t11-Kf-lnb" firstAttribute="leading" secondItem="UpR-OC-vvz" secondAttribute="leading" priority="250" constant="213.5" id="9z0-KP-Xd7"/>
                             <constraint firstItem="UpR-OC-vvz" firstAttribute="bottom" secondItem="ybu-bg-3Xw" secondAttribute="bottom" constant="200" id="Fhr-2Z-N3s"/>
                             <constraint firstAttribute="bottom" secondItem="F9T-Lq-V7a" secondAttribute="bottom" id="FrL-ky-9U2"/>
                             <constraint firstItem="ybu-bg-3Xw" firstAttribute="centerX" secondItem="Ub3-Tz-gFM" secondAttribute="centerX" id="UXP-lc-IOO"/>
-                            <constraint firstItem="ybu-bg-3Xw" firstAttribute="top" relation="lessThanOrEqual" secondItem="t11-Kf-lnb" secondAttribute="bottom" constant="254" id="ZZS-Ii-xkU"/>
                             <constraint firstItem="F9T-Lq-V7a" firstAttribute="trailing" secondItem="UpR-OC-vvz" secondAttribute="trailing" id="gBy-fS-fPJ"/>
                             <constraint firstItem="zwB-4s-v6I" firstAttribute="centerX" secondItem="Ub3-Tz-gFM" secondAttribute="centerX" id="hcm-o8-O3M"/>
                             <constraint firstItem="F9T-Lq-V7a" firstAttribute="leading" secondItem="UpR-OC-vvz" secondAttribute="leading" id="pWy-UZ-hkc"/>
@@ -337,7 +343,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="SiX-5u-fV5">
-                                <rect key="frame" x="70" y="313" width="269" height="72"/>
+                                <rect key="frame" x="72.5" y="313" width="269" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-IW-geI">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="72"/>
@@ -353,14 +359,8 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="アラーム時刻" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTs-EC-dIe">
-                                <rect key="frame" x="20" y="274" width="122.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkN-U8-ott">
-                                <rect key="frame" x="160" y="630" width="94.5" height="27.5"/>
+                                <rect key="frame" x="160" y="629.5" width="94.5" height="27.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="アラーム設定 " cornerStyle="capsule">
@@ -374,13 +374,19 @@
                                     <segue destination="HuG-pl-ynL" kind="presentation" modalPresentationStyle="fullScreen" id="Arl-84-05s"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="アラーム時刻" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTs-EC-dIe">
+                                <rect key="frame" x="20" y="274" width="122.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GP3-6d-Lo5"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pkN-U8-ott" firstAttribute="centerX" secondItem="Rh5-bx-Kkg" secondAttribute="centerX" id="6Lu-7w-CVy"/>
                             <constraint firstItem="GP3-6d-Lo5" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="LTs-EC-dIe" secondAttribute="trailing" constant="271.5" id="B4Q-Cf-I1j"/>
-                            <constraint firstItem="SiX-5u-fV5" firstAttribute="leading" secondItem="GP3-6d-Lo5" secondAttribute="leading" constant="70" id="KXp-Zp-5yo"/>
+                            <constraint firstItem="SiX-5u-fV5" firstAttribute="centerX" secondItem="Rh5-bx-Kkg" secondAttribute="centerX" id="Fct-ia-qPJ"/>
                             <constraint firstItem="6eb-69-M5k" firstAttribute="top" secondItem="Rh5-bx-Kkg" secondAttribute="top" id="LT7-ft-vwp"/>
                             <constraint firstAttribute="bottom" secondItem="6eb-69-M5k" secondAttribute="bottom" id="Mvu-DY-cAS"/>
                             <constraint firstAttribute="bottom" secondItem="6eb-69-M5k" secondAttribute="bottom" id="NVf-KA-jv2"/>

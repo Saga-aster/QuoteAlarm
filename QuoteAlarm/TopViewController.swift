@@ -23,9 +23,12 @@ class TopViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let savedAlarmTime = UserDefaults.standard.object(forKey: "AlarmTime") as? String {
+        if let savedAlarmTime = UserDefaults.standard.object(forKey: "AlarmTime") as? Date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "ja_JP")
+            dateFormatter.dateFormat = "HH:mm"
             alarmTimeLabel.font = UIFont.systemFont(ofSize: 60.0)
-            alarmTimeLabel.text = savedAlarmTime
+            alarmTimeLabel.text = dateFormatter.string(from: savedAlarmTime)
         } else {
             alarmTimeLabel.font = UIFont.systemFont(ofSize: 45.0)
             alarmTimeLabel.text = "未設定"
