@@ -80,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2737AB271EB99F00C882F5 /* QuoteAlarm */,
+				0A2737BA271EB9A000C882F5 /* Info.plist */,
 				0A2737AA271EB99F00C882F5 /* Products */,
 				493C7242DCA29A30355E4424 /* Pods */,
 				B256F59C24F62DA8DB498F13 /* Frameworks */,
@@ -97,12 +98,11 @@
 		0A2737AB271EB99F00C882F5 /* QuoteAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				0A98B646281E1EFD00BF1EA5 /* Extensions */,
+				0AB1F001283A2E8700627FE1 /* Extensions */,
+				0AB1F003283A2EC500627FE1 /* Sounds */,
 				0A87A7872816D991007723B2 /* Model */,
 				0A87A7892816D9B4007723B2 /* View */,
-				0A87A7882816D9AF007723B2 /* Controller */,
-				0A2737BA271EB9A000C882F5 /* Info.plist */,
-				0AA3FC9D28045E1B002FBB99 /* Sounds */,
+				0AB1F002283A2EA200627FE1 /* Contoller */,
 			);
 			path = QuoteAlarm;
 			sourceTree = "<group>";
@@ -118,20 +118,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0A87A7882816D9AF007723B2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0A2737AC271EB99F00C882F5 /* AppDelegate.swift */,
-				0A9831062802A380007E74E0 /* SceneDelegate.swift */,
-				0A94155927EED5970091BDFD /* AlarmSettingViewController.swift */,
-				0A94155D27EEE3100091BDFD /* RepeatSettingViewController.swift */,
-				0A94156127EEE3B20091BDFD /* SoundSelectViewController.swift */,
-				0A94155F27EEE3330091BDFD /* QuoteViewController.swift */,
-				0A94156527EF46D50091BDFD /* TopViewController.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		0A87A7892816D9B4007723B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,15 +128,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0A98B646281E1EFD00BF1EA5 /* Extensions */ = {
+		0AB1F001283A2E8700627FE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				0A98B647281E1F3100BF1EA5 /* UIButton.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0AA3FC9D28045E1B002FBB99 /* Sounds */ = {
+		0AB1F002283A2EA200627FE1 /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				0A2737AC271EB99F00C882F5 /* AppDelegate.swift */,
+				0A9831062802A380007E74E0 /* SceneDelegate.swift */,
+				0A94155927EED5970091BDFD /* AlarmSettingViewController.swift */,
+				0A94155D27EEE3100091BDFD /* RepeatSettingViewController.swift */,
+				0A94156127EEE3B20091BDFD /* SoundSelectViewController.swift */,
+				0A94155F27EEE3330091BDFD /* QuoteViewController.swift */,
+				0A94156527EF46D50091BDFD /* TopViewController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		0AB1F003283A2EC500627FE1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				0A8DE4BA280468CC004A0A39 /* Ambition.mp3 */,
@@ -162,7 +162,7 @@
 				0A8DE4B428046611004A0A39 /* 日輪の光.mp3 */,
 				0A8DE4B028045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 */,
 			);
-			name = Sounds;
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		493C7242DCA29A30355E4424 /* Pods */ = {
