@@ -2,84 +2,82 @@
 //  AlarmSettingViewController.swift
 //  QuoteAlarm
 //
-//  Created by Saga on 2022/01/22.
+//  Created by Saga on 2022/03/26.
 //
 
 import UIKit
 
-class AlarmSettingViewController: UIViewController {
+class AlarmSettingViewController: UITableViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var repeatSettingStatusLabel: UILabel!
+    @IBOutlet private weak var currentSelectedSoundLabel: UILabel!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var snoozeStatusSwitch: UISwitch!
+    var repeatWeekdayFlags: [Bool] = []
+    var soundName = ""
 
-    enum Cell: Int, CaseIterable {
-        case alarmSwitch
-        case alarmTimeSetting
-        case repeatSetting
-        case alarmSoundSetting
-        case vibrationSetting
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        var cellIdentifier: String {
-            switch self {
-            case .alarmSwitch:
-                return "AlarmSwitch"
-            case .alarmTimeSetting:
-                return "AlarmTimeSetting"
-            case .repeatSetting:
-                return "RepeatSetting"
-            case .alarmSoundSetting:
-                return "AlarmSoundSetting"
-            case .vibrationSetting:
-                return "VibrationSetting"
+        // 設定されていたアラーム時刻の取得
+        if let savedAlarmTime = UserDefaults.standard.object(forKey: "AlarmTime") as? Date {
+            datePicker.date = savedAlarmTime
+        }
+
+        // 選択された繰り返し設定の取得
+        if let savedRepeatWeekdayFlags = UserDefaults.standard.object(forKey: "RepeatFlags") as? [Bool] {
+            repeatWeekdayFlags = savedRepeatWeekdayFlags
+            if repeatWeekdayFlags.count == 8 {
+                if repeatWeekdayFlags[0] {
+                    repeatSettingStatusLabel.text = "なし"
+                } else {
+                    repeatSettingStatusLabel.text = "あり"
+                }
+            } else {
+                print("Flagの数が不足しています")
+                print(repeatWeekdayFlags)
             }
+        } else {
+            repeatWeekdayFlags = [true, false, false, false, false, false, false, false]
+            repeatSettingStatusLabel.text = "なし"
         }
-    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "AlarmSwitch", bundle: nil), forCellReuseIdentifier: "AlarmSwitch")
-        tableView.register(UINib(nibName: "AlarmTimeSetting", bundle: nil), forCellReuseIdentifier: "AlarmTimeSetting")
-        tableView.register(UINib(nibName: "RepeatSetting", bundle: nil), forCellReuseIdentifier: "RepeatSetting")
-        tableView.register(UINib(nibName: "AlarmSoundSetting", bundle: nil), forCellReuseIdentifier: "AlarmSoundSetting")
-        tableView.register(UINib(nibName: "VibrationSetting", bundle: nil), forCellReuseIdentifier: "VibrationSetting")
-
-    }
-
-}
-
-extension AlarmSettingViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        print("セルのカウント: \(Cell.allCases.count)")
-        return Cell.allCases.count
-
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cellType = Cell(rawValue: indexPath.row)!
-
-        switch cellType {
-        case .alarmSwitch:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! AlarmSwitch
-            return cell
-        case .alarmTimeSetting:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! AlarmTimeSetting
-            return cell
-        case .repeatSetting:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! RepeatSetting
-            return cell
-        case .alarmSoundSetting :
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! AlarmSoundSetting
-            return cell
-        case .vibrationSetting:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.cellIdentifier) as! VibrationSetting
-            return cell
-
+        // 選択されたサウンドの取得
+        if let savedSelectedSoundName = UserDefaults.standard.object(forKey: "SoundName") as? String {
+            soundName = savedSelectedSoundName
+            currentSelectedSoundLabel.text = soundName
+        } else {
+            soundName = "Ambition"
+            currentSelectedSoundLabel.text = soundName
         }
+
+        // 繰り返し設定の有無に応じてラベルを「あり」「なし」にする
+        if repeatWeekdayFlags[0] {
+            repeatSettingStatusLabel.text = "なし"
+        } else {
+            repeatSettingStatusLabel.text = "あり"
+        }
+
+        currentSelectedSoundLabel.text = soundName
+
+    }
+
+
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+
+    }
+
+    @IBAction func saveButtonTapped(_ sender: Any) {
+
+        let alarmData = AlarmData(date: datePicker.date, repeatWeekdayFlags: repeatWeekdayFlags, snooze: snoozeStatusSwitch.isOn, soundName: soundName)
+        let alarmSetting = AlarmSetting()
+        alarmSetting.setAlarm(alarmData: alarmData)
+        let encodedAlarmData = Converter().encode(alarmData)
+        UserDefaults.standard.set(encodedAlarmData, forKey: "AlarmData")
+        UserDefaults.standard.set(datePicker.date, forKey: "AlarmTime")
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
 
     }
 

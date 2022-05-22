@@ -3,53 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A2737AD271EB99F00C882F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2737AC271EB99F00C882F5 /* AppDelegate.swift */; };
-		0A2737AF271EB99F00C882F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2737AE271EB99F00C882F5 /* SceneDelegate.swift */; };
 		0A2737B4271EB99F00C882F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2737B2271EB99F00C882F5 /* Main.storyboard */; };
 		0A2737B6271EB9A000C882F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2737B5271EB9A000C882F5 /* Assets.xcassets */; };
 		0A2737B9271EB9A000C882F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2737B7271EB9A000C882F5 /* LaunchScreen.storyboard */; };
-		0A7FC941278AA9A000565008 /* AlarmSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC93F278AA9A000565008 /* AlarmSwitch.swift */; };
-		0A7FC942278AA9A000565008 /* AlarmSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FC940278AA9A000565008 /* AlarmSwitch.xib */; };
-		0A7FC946278AA9E800565008 /* AlarmTimeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC944278AA9E800565008 /* AlarmTimeSetting.swift */; };
-		0A7FC947278AA9E800565008 /* AlarmTimeSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FC945278AA9E800565008 /* AlarmTimeSetting.xib */; };
-		0A7FC94A278AAA0400565008 /* RepeatSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC948278AAA0400565008 /* RepeatSetting.swift */; };
-		0A7FC94B278AAA0400565008 /* RepeatSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FC949278AAA0400565008 /* RepeatSetting.xib */; };
-		0A7FC94E278AAA2600565008 /* AlarmSoundSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC94C278AAA2600565008 /* AlarmSoundSetting.swift */; };
-		0A7FC94F278AAA2600565008 /* AlarmSoundSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FC94D278AAA2600565008 /* AlarmSoundSetting.xib */; };
-		0A7FC952278AAA6E00565008 /* VibrationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FC950278AAA6E00565008 /* VibrationSetting.swift */; };
-		0A7FC953278AAA6E00565008 /* VibrationSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FC951278AAA6E00565008 /* VibrationSetting.xib */; };
-		0AD1CA36279BB87000988E59 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1CA35279BB87000988E59 /* AlarmSettingViewController.swift */; };
-		0AD1CA3A279CFD0300988E59 /* RepeatSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1CA39279CFD0300988E59 /* RepeatSettingViewController.swift */; };
-		0AD1CA3C279CFEE100988E59 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1CA3B279CFEE100988E59 /* TabBarController.swift */; };
-		0AD1CA60279D1B4A00988E59 /* AlarmSoundSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1CA5F279D1B4A00988E59 /* AlarmSoundSettingViewController.swift */; };
+		0A87A762281407FB007723B2 /* AlarmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87A761281407FA007723B2 /* AlarmData.swift */; };
+		0A87A76428143D79007723B2 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87A76328143D79007723B2 /* Converter.swift */; };
+		0A87A7862816D7FC007723B2 /* AlarmSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87A7852816D7FC007723B2 /* AlarmSetting.swift */; };
+		0A8DE4AF28045E58004A0A39 /* 休日はまったり.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4AE28045E58004A0A39 /* 休日はまったり.mp3 */; };
+		0A8DE4B128045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4B028045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 */; };
+		0A8DE4B328045EA3004A0A39 /* 日曜のラジオ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4B228045EA3004A0A39 /* 日曜のラジオ.mp3 */; };
+		0A8DE4B528046611004A0A39 /* 日輪の光.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4B428046611004A0A39 /* 日輪の光.mp3 */; };
+		0A8DE4B72804663D004A0A39 /* オーケストラジングル.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4B62804663D004A0A39 /* オーケストラジングル.mp3 */; };
+		0A8DE4B9280466C9004A0A39 /* ヴァルス.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4B8280466C9004A0A39 /* ヴァルス.mp3 */; };
+		0A8DE4BB280468CC004A0A39 /* Ambition.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4BA280468CC004A0A39 /* Ambition.mp3 */; };
+		0A8DE4BD28046958004A0A39 /* START!!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DE4BC28046958004A0A39 /* START!!.mp3 */; };
+		0A94155A27EED5970091BDFD /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94155927EED5970091BDFD /* AlarmSettingViewController.swift */; };
+		0A94155E27EEE3100091BDFD /* RepeatSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94155D27EEE3100091BDFD /* RepeatSettingViewController.swift */; };
+		0A94156027EEE3330091BDFD /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94155F27EEE3330091BDFD /* QuoteViewController.swift */; };
+		0A94156227EEE3B20091BDFD /* SoundSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94156127EEE3B20091BDFD /* SoundSelectViewController.swift */; };
+		0A94156627EF46D50091BDFD /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94156527EF46D50091BDFD /* TopViewController.swift */; };
+		0A9831072802A380007E74E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9831062802A380007E74E0 /* SceneDelegate.swift */; };
+		0A98B648281E1F3100BF1EA5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98B647281E1F3100BF1EA5 /* UIButton.swift */; };
+		0AC688C727B8CD5600C15417 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC688C627B8CD5600C15417 /* QuoteData.swift */; };
+		B7138C4E16855E40A14F4BA2 /* Pods_QuoteAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA049F5FEC3C2A8C586B05E /* Pods_QuoteAlarm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A2737A9271EB99F00C882F5 /* QuoteAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2737AC271EB99F00C882F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A2737AE271EB99F00C882F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A2737B3271EB99F00C882F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A2737B5271EB9A000C882F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A2737B8271EB9A000C882F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A2737BA271EB9A000C882F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7FC93F278AA9A000565008 /* AlarmSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSwitch.swift; sourceTree = "<group>"; };
-		0A7FC940278AA9A000565008 /* AlarmSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmSwitch.xib; sourceTree = "<group>"; };
-		0A7FC944278AA9E800565008 /* AlarmTimeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimeSetting.swift; sourceTree = "<group>"; };
-		0A7FC945278AA9E800565008 /* AlarmTimeSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTimeSetting.xib; sourceTree = "<group>"; };
-		0A7FC948278AAA0400565008 /* RepeatSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSetting.swift; sourceTree = "<group>"; };
-		0A7FC949278AAA0400565008 /* RepeatSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepeatSetting.xib; sourceTree = "<group>"; };
-		0A7FC94C278AAA2600565008 /* AlarmSoundSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundSetting.swift; sourceTree = "<group>"; };
-		0A7FC94D278AAA2600565008 /* AlarmSoundSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmSoundSetting.xib; sourceTree = "<group>"; };
-		0A7FC950278AAA6E00565008 /* VibrationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationSetting.swift; sourceTree = "<group>"; };
-		0A7FC951278AAA6E00565008 /* VibrationSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibrationSetting.xib; sourceTree = "<group>"; };
-		0AD1CA35279BB87000988E59 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
-		0AD1CA39279CFD0300988E59 /* RepeatSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSettingViewController.swift; sourceTree = "<group>"; };
-		0AD1CA3B279CFEE100988E59 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0AD1CA5F279D1B4A00988E59 /* AlarmSoundSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundSettingViewController.swift; sourceTree = "<group>"; };
+		0A87A761281407FA007723B2 /* AlarmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmData.swift; sourceTree = "<group>"; };
+		0A87A76328143D79007723B2 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		0A87A7852816D7FC007723B2 /* AlarmSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetting.swift; sourceTree = "<group>"; };
+		0A8DE4AE28045E58004A0A39 /* 休日はまったり.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "休日はまったり.mp3"; sourceTree = "<group>"; };
+		0A8DE4B028045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "森の中の小鳥のさえずり.mp3"; sourceTree = "<group>"; };
+		0A8DE4B228045EA3004A0A39 /* 日曜のラジオ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "日曜のラジオ.mp3"; sourceTree = "<group>"; };
+		0A8DE4B428046611004A0A39 /* 日輪の光.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "日輪の光.mp3"; sourceTree = "<group>"; };
+		0A8DE4B62804663D004A0A39 /* オーケストラジングル.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "オーケストラジングル.mp3"; sourceTree = "<group>"; };
+		0A8DE4B8280466C9004A0A39 /* ヴァルス.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ヴァルス.mp3"; sourceTree = "<group>"; };
+		0A8DE4BA280468CC004A0A39 /* Ambition.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ambition.mp3; sourceTree = "<group>"; };
+		0A8DE4BC28046958004A0A39 /* START!!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "START!!.mp3"; sourceTree = "<group>"; };
+		0A94155927EED5970091BDFD /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		0A94155D27EEE3100091BDFD /* RepeatSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSettingViewController.swift; sourceTree = "<group>"; };
+		0A94155F27EEE3330091BDFD /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		0A94156127EEE3B20091BDFD /* SoundSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSelectViewController.swift; sourceTree = "<group>"; };
+		0A94156527EF46D50091BDFD /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		0A9831062802A380007E74E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0A98B647281E1F3100BF1EA5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		0AC688C627B8CD5600C15417 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
+		1086333E5799B4EB56D541E1 /* Pods-QuoteAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteAlarm.debug.xcconfig"; path = "Target Support Files/Pods-QuoteAlarm/Pods-QuoteAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA049F5FEC3C2A8C586B05E /* Pods_QuoteAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuoteAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B4ACF6774D0B944A6E163E0 /* Pods-QuoteAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteAlarm.release.xcconfig"; path = "Target Support Files/Pods-QuoteAlarm/Pods-QuoteAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7138C4E16855E40A14F4BA2 /* Pods_QuoteAlarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,8 @@
 			children = (
 				0A2737AB271EB99F00C882F5 /* QuoteAlarm */,
 				0A2737AA271EB99F00C882F5 /* Products */,
+				493C7242DCA29A30355E4424 /* Pods */,
+				B256F59C24F62DA8DB498F13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,36 +97,89 @@
 		0A2737AB271EB99F00C882F5 /* QuoteAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				0A2737AC271EB99F00C882F5 /* AppDelegate.swift */,
-				0A2737AE271EB99F00C882F5 /* SceneDelegate.swift */,
-				0AD1CA39279CFD0300988E59 /* RepeatSettingViewController.swift */,
-				0AD1CA5F279D1B4A00988E59 /* AlarmSoundSettingViewController.swift */,
-				0AD1CA35279BB87000988E59 /* AlarmSettingViewController.swift */,
-				0AD1CA3B279CFEE100988E59 /* TabBarController.swift */,
-				0A2737B2271EB99F00C882F5 /* Main.storyboard */,
-				0A2737B5271EB9A000C882F5 /* Assets.xcassets */,
-				0A2737B7271EB9A000C882F5 /* LaunchScreen.storyboard */,
+				0A98B646281E1EFD00BF1EA5 /* Extensions */,
+				0A87A7872816D991007723B2 /* Model */,
+				0A87A7892816D9B4007723B2 /* View */,
+				0A87A7882816D9AF007723B2 /* Controller */,
 				0A2737BA271EB9A000C882F5 /* Info.plist */,
-				0A7FC943278AA9A900565008 /* CustomCell */,
+				0AA3FC9D28045E1B002FBB99 /* Sounds */,
 			);
 			path = QuoteAlarm;
 			sourceTree = "<group>";
 		};
-		0A7FC943278AA9A900565008 /* CustomCell */ = {
+		0A87A7872816D991007723B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A7FC93F278AA9A000565008 /* AlarmSwitch.swift */,
-				0A7FC940278AA9A000565008 /* AlarmSwitch.xib */,
-				0A7FC944278AA9E800565008 /* AlarmTimeSetting.swift */,
-				0A7FC945278AA9E800565008 /* AlarmTimeSetting.xib */,
-				0A7FC948278AAA0400565008 /* RepeatSetting.swift */,
-				0A7FC949278AAA0400565008 /* RepeatSetting.xib */,
-				0A7FC94C278AAA2600565008 /* AlarmSoundSetting.swift */,
-				0A7FC94D278AAA2600565008 /* AlarmSoundSetting.xib */,
-				0A7FC950278AAA6E00565008 /* VibrationSetting.swift */,
-				0A7FC951278AAA6E00565008 /* VibrationSetting.xib */,
+				0AC688C627B8CD5600C15417 /* QuoteData.swift */,
+				0A87A76328143D79007723B2 /* Converter.swift */,
+				0A87A761281407FA007723B2 /* AlarmData.swift */,
+				0A87A7852816D7FC007723B2 /* AlarmSetting.swift */,
 			);
-			path = CustomCell;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A87A7882816D9AF007723B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A2737AC271EB99F00C882F5 /* AppDelegate.swift */,
+				0A9831062802A380007E74E0 /* SceneDelegate.swift */,
+				0A94155927EED5970091BDFD /* AlarmSettingViewController.swift */,
+				0A94155D27EEE3100091BDFD /* RepeatSettingViewController.swift */,
+				0A94156127EEE3B20091BDFD /* SoundSelectViewController.swift */,
+				0A94155F27EEE3330091BDFD /* QuoteViewController.swift */,
+				0A94156527EF46D50091BDFD /* TopViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0A87A7892816D9B4007723B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A2737B2271EB99F00C882F5 /* Main.storyboard */,
+				0A2737B5271EB9A000C882F5 /* Assets.xcassets */,
+				0A2737B7271EB9A000C882F5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A98B646281E1EFD00BF1EA5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A98B647281E1F3100BF1EA5 /* UIButton.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0AA3FC9D28045E1B002FBB99 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0A8DE4BA280468CC004A0A39 /* Ambition.mp3 */,
+				0A8DE4B8280466C9004A0A39 /* ヴァルス.mp3 */,
+				0A8DE4B62804663D004A0A39 /* オーケストラジングル.mp3 */,
+				0A8DE4AE28045E58004A0A39 /* 休日はまったり.mp3 */,
+				0A8DE4BC28046958004A0A39 /* START!!.mp3 */,
+				0A8DE4B228045EA3004A0A39 /* 日曜のラジオ.mp3 */,
+				0A8DE4B428046611004A0A39 /* 日輪の光.mp3 */,
+				0A8DE4B028045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		493C7242DCA29A30355E4424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1086333E5799B4EB56D541E1 /* Pods-QuoteAlarm.debug.xcconfig */,
+				6B4ACF6774D0B944A6E163E0 /* Pods-QuoteAlarm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B256F59C24F62DA8DB498F13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CA049F5FEC3C2A8C586B05E /* Pods_QuoteAlarm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A2737BD271EB9A000C882F5 /* Build configuration list for PBXNativeTarget "QuoteAlarm" */;
 			buildPhases = (
+				FB190F313611129831853A2C /* [CP] Check Pods Manifest.lock */,
 				0A2737A5271EB99F00C882F5 /* Sources */,
 				0A2737A6271EB99F00C882F5 /* Frameworks */,
 				0A2737A7271EB99F00C882F5 /* Resources */,
+				4A211799E1CC36725DA10B27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,35 +241,81 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8DE4B328045EA3004A0A39 /* 日曜のラジオ.mp3 in Resources */,
 				0A2737B9271EB9A000C882F5 /* LaunchScreen.storyboard in Resources */,
-				0A7FC953278AAA6E00565008 /* VibrationSetting.xib in Resources */,
-				0A7FC94B278AAA0400565008 /* RepeatSetting.xib in Resources */,
+				0A8DE4B128045E7C004A0A39 /* 森の中の小鳥のさえずり.mp3 in Resources */,
+				0A8DE4B528046611004A0A39 /* 日輪の光.mp3 in Resources */,
+				0A8DE4BD28046958004A0A39 /* START!!.mp3 in Resources */,
 				0A2737B6271EB9A000C882F5 /* Assets.xcassets in Resources */,
-				0A7FC94F278AAA2600565008 /* AlarmSoundSetting.xib in Resources */,
+				0A8DE4B72804663D004A0A39 /* オーケストラジングル.mp3 in Resources */,
+				0A8DE4AF28045E58004A0A39 /* 休日はまったり.mp3 in Resources */,
 				0A2737B4271EB99F00C882F5 /* Main.storyboard in Resources */,
-				0A7FC942278AA9A000565008 /* AlarmSwitch.xib in Resources */,
-				0A7FC947278AA9E800565008 /* AlarmTimeSetting.xib in Resources */,
+				0A8DE4B9280466C9004A0A39 /* ヴァルス.mp3 in Resources */,
+				0A8DE4BB280468CC004A0A39 /* Ambition.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A211799E1CC36725DA10B27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteAlarm/Pods-QuoteAlarm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteAlarm/Pods-QuoteAlarm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteAlarm/Pods-QuoteAlarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB190F313611129831853A2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuoteAlarm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A2737A5271EB99F00C882F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD1CA60279D1B4A00988E59 /* AlarmSoundSettingViewController.swift in Sources */,
-				0A7FC94A278AAA0400565008 /* RepeatSetting.swift in Sources */,
-				0AD1CA3A279CFD0300988E59 /* RepeatSettingViewController.swift in Sources */,
-				0AD1CA36279BB87000988E59 /* AlarmSettingViewController.swift in Sources */,
-				0AD1CA3C279CFEE100988E59 /* TabBarController.swift in Sources */,
 				0A2737AD271EB99F00C882F5 /* AppDelegate.swift in Sources */,
-				0A7FC94E278AAA2600565008 /* AlarmSoundSetting.swift in Sources */,
-				0A2737AF271EB99F00C882F5 /* SceneDelegate.swift in Sources */,
-				0A7FC952278AAA6E00565008 /* VibrationSetting.swift in Sources */,
-				0A7FC946278AA9E800565008 /* AlarmTimeSetting.swift in Sources */,
-				0A7FC941278AA9A000565008 /* AlarmSwitch.swift in Sources */,
+				0A87A7862816D7FC007723B2 /* AlarmSetting.swift in Sources */,
+				0A94155E27EEE3100091BDFD /* RepeatSettingViewController.swift in Sources */,
+				0A87A762281407FB007723B2 /* AlarmData.swift in Sources */,
+				0A94155A27EED5970091BDFD /* AlarmSettingViewController.swift in Sources */,
+				0A87A76428143D79007723B2 /* Converter.swift in Sources */,
+				0AC688C727B8CD5600C15417 /* QuoteData.swift in Sources */,
+				0A94156227EEE3B20091BDFD /* SoundSelectViewController.swift in Sources */,
+				0A94156027EEE3330091BDFD /* QuoteViewController.swift in Sources */,
+				0A94156627EF46D50091BDFD /* TopViewController.swift in Sources */,
+				0A9831072802A380007E74E0 /* SceneDelegate.swift in Sources */,
+				0A98B648281E1F3100BF1EA5 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +459,7 @@
 		};
 		0A2737BE271EB9A000C882F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1086333E5799B4EB56D541E1 /* Pods-QuoteAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +479,7 @@
 		};
 		0A2737BF271EB9A000C882F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B4ACF6774D0B944A6E163E0 /* Pods-QuoteAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
